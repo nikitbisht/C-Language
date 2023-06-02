@@ -16,7 +16,7 @@ int main(){
 	while(s1[i]!='\0')
 		i++;
 	i=i-1;
-	//here i is lenth of sting
+	//here i is lenth of string
 	int j=0;
 	for(j=0;j<=i;j++){
 		s2=s1[j];
