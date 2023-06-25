@@ -15,16 +15,27 @@ int main(){
 	gets(str);
 	int i=0,j=0;
 	int l=strlen(str);
+	if((str[0]=='A'||str[0]=='a')&&str[0+1]=='n'&& str[0+2]==' ')
+			i=i+3;
+		else if((str[0]=='A'||str[0]=='a')&&str[0+1]==' ')
+			i=i+2;
+		else if((str[0]=='T'||str[0]=='t')&&str[0+1]=='h'&&str[0+2]=='e'&&str[0+3]==' ')
+			i=i+4;
+		else{
+			str1[0]=str[0];
+			i++;
+			j++;
+		}
 	while(i<=l){
-		if((str[i]=='A'||str[i]=='a')&&str[i+1]=='n'&&(str[i+2]==' '||str[i+2]=='\0')){
+		if((str[i]=='A'||str[i]=='a')&&str[i+1]=='n'&&(str[i+2]==' '||str[i+2]=='\0')&&str[i-1]==' '){
 			i=i+3;
 			continue;		
 		}
-		else if((str[i]=='A'||str[i]=='a')&&(str[i+1]==' '||str[i+1]=='\0')){
+		else if((str[i]=='A'||str[i]=='a')&&(str[i+1]==' '||str[i+1]=='\0')&&str[i-1]==' '){
 			i=i+2;
 			continue;
 		}
-		else if((str[i]=='T'||str[i]=='t')&&str[i+1]=='h'&&str[i+2]=='e'&&(str[i+3]==' '||str[i+3]=='\0')){
+		else if((str[i]=='T'||str[i]=='t')&&str[i+1]=='h'&&str[i+2]=='e'&&(str[i+3]==' '||str[i+3]=='\0')&&str[i-1]==' '){
 			i=i+4;
 			continue;
 		}
